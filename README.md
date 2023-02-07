@@ -7,3 +7,27 @@ https://nodejs.org/en/
 ## "build": "GENERATE_SOURCEMAP=false react-scripts build", Source code none.  
 ## npm i sass
 ## npm tailwind & bootstrap
+
+
+
+#Day 1
+### index
+### map  
+function App() {
+
+  const todos = [ 'todo1','todo2','todo3'];
+  return (
+    <div className="App">
+      <ul>
+          {todos.map((todo,index) => (
+            <li key={index}>
+              {todo}
+            </li>
+          ))}
+      </ul>
+    </div>
+
+  );
+}
+
+export default App;
