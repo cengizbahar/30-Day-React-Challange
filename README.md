@@ -37,6 +37,40 @@ export default App;
 ```
 # Day 2
 - props
-
+- component
+- useState
+- npm i classnames
 ```
+
+import Button from "./components/Button";
+
+function App() {
+
+  return (
+    <div className="App" >
+      <Button text="Buton Örneği" variant="success"/>
+    </div>
+
+  );
+}
+
+export default App;
+
+
+Button.js
+
+// Dilerseniz props şeklinde bilgileri öğrenebilirsiniz. function Button(props) <button>{props.text}</button>
+// Distiraction şeklinde kullanım tavsiye edilir. Button({text , variant})   <button>{text} {variant} </button>
+
+function Button({text , variant}) {
+    return (
+        <button>
+            {text} {variant}
+        </button>
+    ) 
+}
+
+export default Button
+
+
 ```
