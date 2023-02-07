@@ -12,7 +12,8 @@ https://nodejs.org/en/
 
 #Day 1
 ### index
-### map  
+### map
+`
 function App() {
 
   const todos = [ 'todo1','todo2','todo3'];
@@ -31,3 +32,4 @@ function App() {
 }
 
 export default App;
+`
