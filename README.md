@@ -5,3 +5,5 @@ https://nodejs.org/en/
 ## npm install -g npx
 ## npm run build
 ## "build": "GENERATE_SOURCEMAP=false react-scripts build", Source code none.  
+## npm i sass
+## npm tailwind & bootstrap
