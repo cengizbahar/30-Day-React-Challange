@@ -38,7 +38,7 @@ export default App;
 # Day 2
 - props
 - component
-- useState
+
 ## npm i classnames
 ```
 
@@ -73,4 +73,12 @@ function Button({text , variant}) {
 export default Button
 
 
+```
+
+# Day 3
+- useState
+- useEffect
+
+
+```
 ```
