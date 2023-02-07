@@ -10,18 +10,19 @@ https://nodejs.org/en/
 
 
 
-#Day 1
-### index
-### map
-`
+# Day 1 
+- index
+- map
+- style
+```
 function App() {
 
   const todos = [ 'todo1','todo2','todo3'];
   return (
     <div className="App">
-      <ul>
+      <ul >
           {todos.map((todo,index) => (
-            <li key={index}>
+            <li style{{color: "red"}} key={index}>
               {todo}
             </li>
           ))}
@@ -32,4 +33,4 @@ function App() {
 }
 
 export default App;
-`
+```
