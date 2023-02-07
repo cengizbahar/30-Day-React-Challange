@@ -35,7 +35,7 @@ function App() {
 
 export default App;
 ```
-# Day 1 
+# Day 2
 - props
 
 ```
