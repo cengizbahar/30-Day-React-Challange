@@ -39,7 +39,7 @@ export default App;
 - props
 - component
 - useState
-- npm i classnames
+## npm i classnames
 ```
 
 import Button from "./components/Button";
