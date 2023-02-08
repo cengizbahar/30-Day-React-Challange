@@ -3,9 +3,12 @@
 
 function Button({text , variant}) {
     return (
-        <button>
-            {text} {variant}
-        </button>
+        <>
+            <button>
+                {text} {variant}
+            </button>
+        </>
+       
     ) 
 }
 
