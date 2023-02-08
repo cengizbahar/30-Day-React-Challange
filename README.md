@@ -149,3 +149,37 @@ export default function Test() {
 
 
 ```
+# Day 4
+- useRef JSX elemantlarını reflemek için kullanılır
+- forwardRef Componentleri reflemek için kullanılır
+
+
+
+```
+import {useRef, forwardRef } from "react";
+
+/* Komponent İçin kullanılır */
+const Input = forwardRef((props, ref) =>{
+  return <input ref={ref} type="text" {... props} />
+})
+
+function App() {
+ 
+ /* Div elemanlarına erişmek için kullanılır */
+  const inputRef = useRef()
+  const focusInput = () => {
+    inputRef.current.focus()
+  }
+  
+  return (
+    <div className="App" >
+      <input type="text" ref={inputRef} />
+      <button onClick={focusInput}>Focusla</button>
+    </div>
+
+  );
+}
+
+export default App;
+
+```
