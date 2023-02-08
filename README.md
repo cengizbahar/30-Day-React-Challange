@@ -190,6 +190,7 @@ export default App;
 import { useReducer } from "react";
 import {reducer} from "./reducer/reducer";
 
+// initialStatelerimizi oluşturuyoruz.
 const initialState = {
   data: "",
   loading: false,
@@ -200,6 +201,7 @@ function App() {
 
 
   const [state, dispatch] = useReducer(reducer, initialState);
+  // state objemize eşitliyoruz.
   const { data, loading, error} = state;
   const fetchDog = () => {
     dispatch({ type: "FETCH_START" });
@@ -214,13 +216,6 @@ function App() {
       })
   };
 
-  const todos = ['todo1', 'todo2', 'todo3'];
-  const [show, setShow] = useState(false)
-  /* Div elemanlarına erişmek için kullanılır */
-  const inputRef = useRef()
-  const focusInput = () => {
-    inputRef.current.focus()
-  }
 
 
   return (
