@@ -80,7 +80,7 @@ export default Button
 - useEffect
 - Fetch
 - Destroy Example
-
+Burada yapmak istediklerimizi dinleyip ne yapmak istediğimizi belirtlerek kullanım sağlıyoruz. Yaşam döngüsü olarak kullanılmaktadır. useState ve useEffect
 
 ```
 import { useState } from "react";
@@ -185,8 +185,75 @@ export default App;
 ```
 
 
-# Day 4
+# Day 5
 - useReducer
+Reducerimizi geniş çaplı projelerde kullanarak state yönetimleri yapıyoruz. Aşşağıda bir apiye istek yaparak kullanım yaptığım bir örneği inceleyebilirsiniz.
 ```
+import { useReducer } from "react";
+import {reducer} from "./reducer/reducer";
+
+const initialState = {
+  data: "",
+  loading: false,
+  error: ""
+}
+
+function App() {
+
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const { data, loading, error} = state;
+  const fetchDog = () => {
+    dispatch({ type: "FETCH_START" });
+
+    fetch("https://dog.ceo/api/breeds/image/random")
+      .then((res) => res.json())
+      .then((res) => {
+        dispatch({ type: "FETCH_SUCCESS", payload: res.message });
+      })
+      .catch(() => {
+        dispatch({ type: "FETCH_ERROR", payload: "Error fetching data" })
+      })
+  };
+
+  const todos = ['todo1', 'todo2', 'todo3'];
+  const [show, setShow] = useState(false)
+  /* Div elemanlarına erişmek için kullanılır */
+  const inputRef = useRef()
+  const focusInput = () => {
+    inputRef.current.focus()
+  }
+
+
+  return (
+    <div className="App" >
+      <button onClick={fetchDog} disabled={loading}>Fetch Dog</button>
+      {data && (
+        <div>
+          <img src={data} alt="random dog" />
+        </div>
+      )}
+      {error && <p>{error}</p>}
+    </div>
+
+  );
+}
+
+export default App;
+
+reducer.js
+
+export const reducer = (state, action) => {
+    switch (action.type) {
+        case "FETCH_START":
+            return { ...state, data: "", loading: true, error: "" };
+        case "FETCH_SUCCESS":
+            return { ...state, loading: false, data: action.payload };
+        case "FETCH_ERROR":
+            return { ...state, loading: false, error: action.payload };
+        default:
+            return state;
+    }
+};
 
 ```
