@@ -80,7 +80,7 @@ export default Button
 - useEffect
 - Fetch
 - Destroy Example
-Burada yapmak istediklerimizi dinleyip ne yapmak istediğimizi belirtlerek kullanım sağlıyoruz. Yaşam döngüsü olarak kullanılmaktadır. useState ve useEffect
+- Burada yapmak istediklerimizi dinleyip ne yapmak istediğimizi belirtlerek kullanım sağlıyoruz. Yaşam döngüsü olarak kullanılmaktadır. useState ve useEffect
 
 ```
 import { useState } from "react";
@@ -153,8 +153,6 @@ export default function Test() {
 - useRef JSX elemantlarını reflemek için kullanılır
 - forwardRef Componentleri reflemek için kullanılır
 
-
-
 ```
 import {useRef, forwardRef } from "react";
 
@@ -187,7 +185,7 @@ export default App;
 
 # Day 5
 - useReducer
-Reducerimizi geniş çaplı projelerde kullanarak state yönetimleri yapıyoruz. Aşşağıda bir apiye istek yaparak kullanım yaptığım bir örneği inceleyebilirsiniz.
+- Reducerimizi geniş çaplı projelerde kullanarak state yönetimleri yapıyoruz. Aşşağıda bir apiye istek yaparak kullanım yaptığım bir örneği inceleyebilirsiniz.
 ```
 import { useReducer } from "react";
 import {reducer} from "./reducer/reducer";
