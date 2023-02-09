@@ -11,13 +11,14 @@ export default function Test() {
         fetch('https://jsonplaceholder.typicode.com/todos/1')
             .then(response => response.json())
             .then(json => console.log(json))
+            
         let interval = setInterval(() => console.log('interval çalıştı'), 1000)
         return () => {
             console.log('component destorey')
             clearInterval(interval)
         }
     }, [])
-
+    
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/todos/{postId}`)
             .then(res => res.json())
